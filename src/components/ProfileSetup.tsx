@@ -1,13 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { RadioGroup,
-
-Content } from "@/components/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Car, User, MapPin, Clock, Music, Users } from 'lucide-react';
@@ -96,7 +93,7 @@ const ProfileSetup = ({ user, onComplete }: ProfileSetupProps) => {
               className="space-y-4"
             >
               <div className="flex items-center space-x-2 p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
-                <input type="radio" value="driver" id="driver" className="hidden" />
+                <RadioGroupItem value="driver" id="driver" />
                 <div className="flex-1">
                   <Label htmlFor="driver" className="cursor-pointer">
                     <div className="flex items-center space-x-3">
@@ -111,7 +108,7 @@ const ProfileSetup = ({ user, onComplete }: ProfileSetupProps) => {
               </div>
               
               <div className="flex items-center space-x-2 p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
-                <input type="radio" value="rider" id="rider" className="hidden" />
+                <RadioGroupItem value="rider" id="rider" />
                 <div className="flex-1">
                   <Label htmlFor="rider" className="cursor-pointer">
                     <div className="flex items-center space-x-3">
